@@ -1,7 +1,19 @@
-# Default Knops Mini Layout
+# Copy of Default Knops Mini Layout
 
-![Knops logo](http://knops.io/img/Knops_logo.jpg)
+   Key Layout
+ _____	 _____	 _____
+|     | |     | |     |
+|  1  | |  2  | |  3  |
+|_____| |_____| |_____|
+ _____	 _____	 _____
+|     |	|     | |     | 
+|  4  | |  5  | |  6  |
+|_____| |_____| |_____|
 
-![Knops Mini Layout Image](https://i.imgur.com/WQBQctm.png)
+  Each Layout row below keys. 1,2,3,4,5,6
 
-This is the default layout that comes flashed on every Knops Mini. For your use, you probably want to change this. We suggest you to use [our configurator tool](http://knops.io/configurator.html) for this.
+  Hold 3 when powering on for DFU Program Mode
+
+Note:
+Coppied at #2832 May 12,2018  
+(I'm new to git, not sure if this is obvious)
