@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
 *   Layer 1
 *	 _____	 _____	 _____
-*	| 	  | | 	  | | 	  |
-*	  ESC    Macro3  Macro4
+*	|     | |     | |     |
+*	  ESC      F    Macro4
 *	|_____| |_____| |_____|
 *	 _____	 _____	 _____
 *	| 	  | | 	  | | 	  |
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 *
 */
 	LAYOUT(
-		LT(3, KC_ESC), M(3), M(4), M(5), M(6), M(7)),
+		LT(3, KC_ESC), KC_F, M(4), M(5), M(6), M(7)),
 
 /*
 *   Layer 2
