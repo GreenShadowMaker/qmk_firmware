@@ -1,4 +1,8 @@
 // GreenShadowMaker Keymap
+// Copy from input_club starting point
+
+// removed code for F() type functions
+// removed code for M() old type macros
 
 #include QMK_KEYBOARD_H
 #include "debug.h"
@@ -9,6 +13,7 @@
 #define L1 1
 #define L2 2
 
+// Used for Macros
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
   EPRM,
@@ -189,44 +194,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 };
 
-const uint16_t PROGMEM fn_actions[] = {
-    [1] = ACTION_LAYER_TAP_TOGGLE(L1)                // FN1 - Momentary Layer 1 (Function)
-};
 
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
-{
-  // MACRODOWN only works in this function
-      switch(id) {
-        case 0:
-        if (record->event.pressed) {
-          SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
-        }
-        break;
-        case 1:
-        if (record->event.pressed) { // For resetting EEPROM
-          eeconfig_init();
-        }
-        break;
-      }
-    return MACRO_NONE;
-};
 
+// New Macro style Not mapped to any key right now
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    // dynamically generate these.
-    case EPRM:
+    case EPRM:  // not using this
       if (record->event.pressed) {
+        // in eeconfig.h and eeconfig.c  listed as needs doc.  not sure what it does
         eeconfig_init();
       }
       return false;
       break;
-    case VRSN:
+    case VRSN:  // Appears to type version when pressed, should try in keymap
       if (record->event.pressed) {
         SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
       }
       return false;
       break;
-    case RGB_SLD:
+    case RGB_SLD: // Appears to change rgb mode, not sure exactly what it does or impact
       if (record->event.pressed) {
         #ifdef RGBLIGHT_ENABLE
           rgblight_mode(1);
@@ -244,7 +230,8 @@ void matrix_init_user(void) {
 };
 
 
-// Runs constantly in the background, in a loop.
+// Runs every cycle keypresses are scanned
+// Currently only changing backlight state
 void matrix_scan_user(void) {
 
     uint8_t layer = biton32(layer_state);
@@ -254,9 +241,8 @@ void matrix_scan_user(void) {
     ergodox_right_led_2_off();
     ergodox_right_led_3_off();
     switch (layer) {
-      // TODO: Make this relevant to the ErgoDox EZ.
         case 1:
-            ergodox_right_led_1_on();
+            ergodox_right_led_1_on();  // Appears to do something in visualizer.c to trigger LEDs
             break;
         case 2:
             ergodox_right_led_2_on();
