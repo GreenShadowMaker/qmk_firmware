@@ -22,16 +22,16 @@
 #include "visualizer.h"
 #include "led.h"
 
-void ergodox_led_lower_on (void);
-void ergodox_led_raise_on (void);
-void ergodox_led_adjust_on (void);
+void ergodox_led_LCDlayer1_on (void);
+void ergodox_led_LCDlayer2_on (void);
+void ergodox_led_LCDlayer3_on (void);ergodox_led_raise_
 
-void ergodox_led_lower_off (void);
-void ergodox_led_raise_off (void);
-void ergodox_led_adjust_off (void);
+void ergodox_led_LCDlayer1_off (void);
+void ergodox_led_LCDlayer2_off (void);
+void ergodox_led_LCDlayer3_off (void);
 
-void ergodox_led_lower_set (uint8_t n);
-void ergodox_led_raise_set (uint8_t n);
-void ergodox_led_adjust_set (uint8_t n);
+void ergodox_led_LCDlayer1_set (uint8_t n);
+void ergodox_led_LCDlayer2_set (uint8_t n);
+void ergodox_led_LCDlayer3_set (uint8_t n);
 
 #endif /* VISUALIZER_H_ */

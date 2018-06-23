@@ -304,17 +304,17 @@ void ergodox_board_led_on(void){
 }
 
 // gsm - each of these have been renamed compared to base
-void ergodox_led_lower_on(void){
+void ergodox_led_LCDlayer1_on(void){
   user_data_keyboard.led_on |= (1u << 0);
   visualizer_set_user_data(&user_data_keyboard);
 }
 
-void ergodox_led_raise_on(void){
+void ergodox_led_LCDlayer2_on(void){
   user_data_keyboard.led_on |= (1u << 1);
   visualizer_set_user_data(&user_data_keyboard);
 }
 
-void ergodox_led_adjust_on(void){
+void ergodox_led_LCDlayer3_on(void){
   user_data_keyboard.led_on |= (1u << 2);
   visualizer_set_user_data(&user_data_keyboard);
 }
@@ -323,32 +323,32 @@ void ergodox_board_led_off(void){
   // No board led support
 }
 
-void ergodox_led_lower_off(void){
+void ergodox_led_LCDlayer1_off(void){
   user_data_keyboard.led_on &= ~(1u << 0);
   visualizer_set_user_data(&user_data_keyboard);
 }
 
-void ergodox_led_raise_off(void){
+void ergodox_led_LCDlayer2_off(void){
   user_data_keyboard.led_on &= ~(1u << 1);
   visualizer_set_user_data(&user_data_keyboard);
 }
 
-void ergodox_led_adjust_off(void){
+void ergodox_led_LCDlayer3_off(void){
   user_data_keyboard.led_on &= ~(1u << 2);
   visualizer_set_user_data(&user_data_keyboard);
 }
 
-void ergodox_led_lower_set(uint8_t n) {
+void ergodox_led_LCDlayer1_set(uint8_t n) {
   user_data_keyboard.led1 = n;
   visualizer_set_user_data(&user_data_keyboard);
 }
 
-void ergodox_led_raise_set(uint8_t n) {
+void ergodox_led_LCDlayer2_set(uint8_t n) {
   user_data_keyboard.led2 = n;
   visualizer_set_user_data(&user_data_keyboard);
 }
 
-void ergodox_led_adjust_set(uint8_t n) {
+void ergodox_led_LCDlayer3_set(uint8_t n) {
   user_data_keyboard.led3 = n;
   visualizer_set_user_data(&user_data_keyboard);
 }

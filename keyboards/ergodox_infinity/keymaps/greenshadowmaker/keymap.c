@@ -238,20 +238,20 @@ void matrix_scan_user(void) {
 
     // All LEDs off unless on a layer
     ergodox_board_led_off();
-    ergodox_led_lower_off();
-    ergodox_led_raise_off();
-    ergodox_led_adjust_off();
+    ergodox_led_LCDlayer1_off();
+    ergodox_led_LCDlayer2_off();
+    ergodox_led_LCDlayer3_off();
 
     switch (layer) {
         case 1:
-          ergodox_led_lower_on();  // triggered in visualizer
+          ergodox_led_LCDlayer1_on();  // triggered in visualizer
           break;
         case 2:
-          ergodox_led_raise_on();
+          ergodox_led_LCDlayer2_on();
           break;
         case 3:
           // not currently using but adding here to match from dudeofawesome visualizer.
-          ergodox_led_adjust_on();
+          ergodox_led_LCDlayer3_on();
           break;
         default:
             // none
