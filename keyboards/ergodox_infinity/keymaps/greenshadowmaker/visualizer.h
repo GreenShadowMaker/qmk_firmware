@@ -24,7 +24,7 @@
 
 void ergodox_led_LCDlayer1_on (void);
 void ergodox_led_LCDlayer2_on (void);
-void ergodox_led_LCDlayer3_on (void);ergodox_led_raise_
+void ergodox_led_LCDlayer3_on (void);
 
 void ergodox_led_LCDlayer1_off (void);
 void ergodox_led_LCDlayer2_off (void);
