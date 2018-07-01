@@ -4,8 +4,6 @@ COSPAD - Left Hand Game Mode
 Left Hand keyboard to use for playing games with a mouse.
   -Connected to laptop  so full keyboard available for typing.
 
-
-
 ## program mode (reset)
 
    Looking from the rear with the USB port away from you.
@@ -22,4 +20,6 @@ Make example for this keyboard (after setting up your build environment):
 
     make cospad:gsm-cospad-gameLeft
     
-See QMK docs to setup your environment before flashing
+See QMK docs to setup your environment before flashinga
+
+-note: I converted to numpad layout, using an iris now for gamepad
