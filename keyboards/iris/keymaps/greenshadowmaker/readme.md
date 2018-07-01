@@ -3,7 +3,9 @@ Iris
 
 My map for an Iris keyboard.  
 
-Starting from Default
+Started with default, and changed a few keys
+
+Added a single RGB LED to the left hand, (5mm through-hole neopixel from adafruit), I can now see when layer has changed.
 
 
 
