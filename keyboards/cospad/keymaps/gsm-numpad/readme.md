@@ -12,12 +12,12 @@ Starting from default
    These 2 pins are labeled as RST when viewed from the front, but not visible if a plate was used to mount switches
 
 ### To Flash
-   make cospad:gsm-cospad-gameLeft:dfu
+   make cospad:gsm-numpad:dfu
 
 
 
 Make example for this keyboard (after setting up your build environment):
 
-    make cospad:gsm-cospad-gameLeft
+    make cospad:gsm-numpad
 
 See QMK docs to setup your environment before flashing
