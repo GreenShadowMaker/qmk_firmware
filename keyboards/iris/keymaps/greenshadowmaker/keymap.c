@@ -144,16 +144,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 uint32_t layer_state_set_user(uint32_t state) {
     switch (biton32(state)) {
     case _RAISE:
-        rgblight_setrgb (0x00,  0x00, 0xFF);
+        rgblight_setrgb (0,  0, 128);
         break;
     case _LOWER:
-        rgblight_setrgb (0xFF,  0x00, 0x00);
+        rgblight_setrgb (128,  0, 0);
         break;
     case _ADJUST:
-        rgblight_setrgb (0x7A,  0x00, 0xFF);
+        rgblight_setrgb (128,  0, 128);
         break;
     default: //  for any other layers, or the default layer
-        rgblight_setrgb (0x00,  0xFF, 0xFF);
+        rgblight_setrgb (0,  64, 64);
         break;
     }
   return state;
