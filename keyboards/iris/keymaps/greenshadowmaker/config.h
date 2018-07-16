@@ -42,7 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Turn off rbg on sleep
 #define RGBLIGHT_SLEEP
 
-// Set max brightness
-#define RGBLIGHT_LIMIT_VAL 100
+// Set max brightness (changed with colors instead)
+// #define RGBLIGHT_LIMIT_VAL 100
 
 #endif

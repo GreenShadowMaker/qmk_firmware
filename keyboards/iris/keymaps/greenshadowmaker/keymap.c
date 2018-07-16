@@ -153,7 +153,8 @@ uint32_t layer_state_set_user(uint32_t state) {
         rgblight_setrgb (128,  0, 128);
         break;
     default: //  for any other layers, or the default layer
-        rgblight_setrgb (0,  64, 64);
+        // rgblight_sethsv(0, 0, 0);  // Enabled temporarily to set eprom LED value to off (Had some undesired color assigned on boot)
+        rgblight_setrgb (0,  0, 0);
         break;
     }
   return state;
